@@ -31,7 +31,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-width: 27rem;
     z-index: 1;
 }
 
