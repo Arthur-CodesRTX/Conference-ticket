@@ -1,0 +1,259 @@
+@media screen and (min-width: 50em){
+    .wrapper{
+        background-image: url(../images/background-tablet.png);
+    }
+
+    .mainContainer{
+        width: 30rem;
+    }
+
+    .bodyImages .patternLineTop{
+        width: 20rem;
+        
+    }
+
+    .bodyImages .patternLines{
+        width: 105rem;
+        left: 110px;
+       
+    }
+
+    .bodyImages .patternCircle_1{
+        position: fixed;
+        right: 450px;
+        top: 500px;
+    }
+
+    .mainTicket{
+        background: url(../images/pattern-ticket.svg);
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        width: 37.5rem;
+        height: 17.5rem;
+        background-repeat: no-repeat;
+        margin: 4rem;
+    }
+
+    .ticketContainer{
+        position: absolute;
+        top:0px;
+        left: 0px;
+        padding: 2rem;
+        display: flex;
+    }
+
+    .ticketProfile{
+        display: flex;
+        position: absolute;
+        top: 150px;
+        left: 0px;
+        padding: 0 2rem ;
+    }
+
+    .ticketNumber{
+        position: absolute;
+        top: 120px;
+        right: 0px;
+        transform:rotate(90deg);
+        font-size: 2rem;
+        color:var(--four-color);
+     }
+
+    .ticketNumber span{
+        position: static;
+        font-size: 2rem;
+        color:var(--four-color);
+    }
+
+    .header{
+        width: 50rem;
+    }
+
+    .mainUploadBox #preview{
+        width: 6rem;
+    }
+
+}
+
+@media screen and (min-width: 90em) {
+
+    :root{
+        --one-color:hsl(7, 88%, 67%);
+        --two-color:hsl(248, 70%, 10%);
+        --three-color:hsl(245, 19%, 35%);
+        --four-color:#8784a4;
+        --five-color:hsl(252, 6%, 83%);
+    }
+
+    .wrapper{
+        background-image: url(../images/background-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .bodyBackground{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .mainContainer{
+        width: 40rem;
+    }
+
+    .bodyImages .patternLinesBottom{
+        display: none;
+    }
+
+    .bodyImages .patternLinesDesktop{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 80rem;
+    }
+
+    .bodyImages .patternLineTop{
+        width: 20rem;
+        
+    }
+
+    .bodyImages .patternLines{
+        width: 105rem;
+        left: 110px;
+       
+    }
+
+    .bodyImages .patternCircle_1{
+        position: fixed;
+        right: 450px;
+        top: 500px;
+    }
+
+    .headerTitle h1{
+        font-size: 3.4rem;
+       
+    }
+
+    .headerTitle h2{
+        font-size: 1.8rem;
+    }
+
+    .ticketContainer .ticketText h2, .ticketProfile .ticketTextProfile h2{
+    font-size: 1.8rem;
+    }
+    .ticketContainer .ticketText p, .ticketProfile .ticketTextProfile p{
+    font-size: 1rem;
+    }
+
+    .mainCongrats h1{
+        font-size: 3.4rem;
+        
+    }
+
+    .header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mainCongrats h2{
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    .mainCongrats{
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    
+    /* .ticketBackground{
+        position: relative;
+        padding-top: 10rem;
+        width: 35rem;
+    } */
+
+    .mainTicket{
+        background: url(../images/pattern-ticket.svg);
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        width: 37.5rem;
+        height: 17.5rem;
+        background-repeat: no-repeat;
+        margin-bottom: 6rem;
+    }
+
+    .ticketContainer{
+        position: absolute;
+        top:0px;
+        left: 0px;
+        padding: 2rem;
+        display: flex;
+    }
+
+    .ticketProfile{
+        display: flex;
+        position: absolute;
+        top: 150px;
+        left: 0px;
+        padding: 0 2rem ;
+    }
+    
+    .ticketText{
+        padding-left: 1rem;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .ticketText p{
+        margin-top: 1rem;
+        color: var(--four-color);
+    }
+
+    
+    .ticketText p a{
+        display: flex;
+        
+    }
+    
+    .ticketText h2{
+        padding: 0;
+        
+    }
+    
+    .ticketNumber{
+       position: absolute;
+       top: 120px;
+       right: 0px;
+       transform:rotate(90deg);
+    }
+
+    .ticketNumber span{
+       position: static;
+       font-size: 2rem;
+       color:var(--four-color);
+    }
+    
+    .ticketProfile #imgAvatar{
+        width: 5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mainUploadBox #preview{
+        width: 6rem;
+    }
+
+}
+

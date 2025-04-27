@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+/* 🎨 Variáveis de cor reutilizáveis */
+:root {
+    --one-color: hsl(7, 88%, 67%);
+    --two-color: hsl(248, 70%, 10%);
+    --three-color: hsl(245, 19%, 35%);
+    --four-color: #8784a4;
+    --five-color: hsl(252, 6%, 83%);
+}
+
+/* Fundo principal, centralização geral */
+.wrapper {
+    background-image: url(../images/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-family: "Inconsolata", "Arial";
+    
+}
+
+/* Esconde elemento visualmente */
+.displayNone {
+    display: none;
+}
+
+/* Container principal */
+.bodyBackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 27rem;
+    z-index: 1;
+}
+
+
+/* Imagens decorativas */
+.bodyImages .patternLines {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.bodyImages .patternCircle_1{
+    position: fixed;
+    right: 0px;
+    top: 500px;
+}
+
+.bodyImages .patternCircle_2{
+    position: fixed;
+    left: 0px;
+    top: -100px;
+}
+
+.bodyImages .patternLinesDesktop {
+    display: none;
+}
+.bodyImages .patternLinesBottom {
+    width: 25rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+.bodyImages .patternLineTop {
+    width: 10rem;
+    position: fixed;
+    top: 30px;
+    right: 0;
+    z-index: 0;
+}
+
+/* Cabeçalho */
+.header {
+    padding-bottom: 4rem;
+}
+.header img {
+    padding: 3rem 1rem;
+}
+.header .headerTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-shadow: 2px 2px 2px black;
+}
+.headerTitle h1 {
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.4rem;
+    color: white;
+    font-weight: 600;
+}
+.headerTitle h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--five-color);
+    padding-top: 1rem;
+}
+
+/* Área de upload */
+.mainUpload {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+}
+.mainUpload h3 {
+    text-align: left;
+    margin-bottom: .8rem;
+    color: var(--five-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.mainUploadBox {
+    background-color: rgb(75, 72, 106, 0.3);
+    border-radius: 10px;
+    border: var(--five-color) 2px dashed;
+    padding: 2rem 0;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    transition: background-color 0.3s;
+}
+.mainUploadBox:hover{
+    cursor:pointer;
+}
+.hoverInput:hover{
+    background-color: rgb(75, 72, 106);
+    transition: background-color 0.3s;
+    cursor:pointer;
+}
+.mainUploadBox:hover #MainUploadIcon{
+    border: 0.5px solid rgb(204, 204, 204);
+    transition: border 0.3s;
+}
+.mainUploadBox p {
+    color: var(--five-color);
+    margin-top: 1rem;
+}
+.mainUploadButtons{
+    display: none;
+}
+.mainUploadBox #MainUploadIcon{
+    background-color: rgb(66, 66, 66, 1);
+    padding: 0.7rem;
+    border-radius: 12px;
+    border: #4b4b4e .5px solid;
+    transition: border 0.3s;
+}
+
+.mainUploadImg{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.mainUploadButtons button{
+    padding: 0.5rem 0.8rem;
+    background-color: var(--three-color);
+    border-radius: 5px;
+    color: var(--five-color);
+    text-transform: capitalize;
+    border: none;
+    
+}
+
+.mainUploadButtons button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#fileInput{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mainUploadBox #preview{
+    display: none;
+    margin: 1rem;
+    margin-top:0;
+    border-radius: 20%;
+    border: rgb(204, 204, 204) 1px solid;
+    transition: border 0.3s;
+    width: 4rem;
+    aspect-ratio: 1;
+}
+
+
+
+/* Info sobre tamanho e formato */
+.divInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    padding-left: 0;
+}
+.divInfo p {
+    font-size: .75rem;
+    color: var(--four-color);
+}
+
+/* Formulário */
+.formInformations {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.formInformations label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    display: flex;
+    gap: 0.5rem;
+    text-shadow: 2px 2px 2px black;
+    font-weight: 400;
+    width: 100%;
+     
+}
+
+.formInformations input {
+    
+    width: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 1px solid var(--four-color);
+    background-color: rgb(75, 72, 106, 0.3);
+    backdrop-filter: blur(2px);
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.formInformations input:focus {
+    outline: var(--four-color) 1px solid;
+    outline-offset: 2px;
+    box-shadow: 0 0 5px var(--four-color);
+}
+#inputEmail::placeholder, #inputGit::placeholder {
+    color: var(--four-color);
+}
+
+/* Botão */
+.ticketButton {
+    border-radius: 10px;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 10rem;
+    background: linear-gradient(to left, hsl(7, 71%, 60%), var(--one-color));
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: hsl(248, 70%, 10%);
+    cursor: pointer;
+    transition: background 0.2s ease;
+    z-index: 1;
+}
+.ticketButton:active {
+    background: linear-gradient(to left , var(--one-color),hsl(7, 71%, 60%));
+    transition: background 0.2s ease;
+}
+
+/* Mensagem de parabéns */
+.mainCongrats {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.mainCongrats h1 {
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.4rem;
+    color: white;
+}
+
+.congratsFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainCongrats h1 span {
+    background: linear-gradient(to right, var(--one-color), white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.mainCongrats h2 span {
+    color: var(--one-color);
+}
+.mainCongrats h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--five-color);
+}
+
+/* Imagem de fundo do ingresso */
+/* Container do ingresso */
+.mainTicket{
+    background: url(../images/pattern-ticket.svg);
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 27rem;
+    height: 12.5rem;
+    background-repeat: no-repeat;
+    margin: 0;
+    margin-bottom: 8rem;
+}
+
+.ticketContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 1rem;
+    display: flex;
+}
+.ticketContainer .ticketText h2,
+.ticketProfile .ticketTextProfile h2 {
+    font-size: 1.8rem;
+}
+.ticketContainer .ticketText p,
+.ticketProfile .ticketTextProfile p {
+    font-size: 1rem;
+}
+
+/* Perfil do ingresso */
+.ticketProfile {
+    display: flex;
+    position: absolute;
+    top: 100px;
+    padding: 0 1rem;
+}
+.ticketText {
+    padding-left: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.ticketText p {
+    color: var(--four-color);
+}
+
+.ticketTextProfile{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ticketTextProfile h2{
+    font-weight: 400;
+}
+
+.ticketTextProfile p a {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--five-color);
+}
+.ticketText h2 {
+    padding: 0;
+}
+
+/* Número rotacionado do ingresso */
+.ticketNumber{
+    position: absolute;
+    top: 80px;
+    right: -10px;
+    transform: rotate(90deg);
+    font-size: 2rem;
+    color: var(--four-color);
+}
+
+/* Imagem do avatar */
+.ticketProfile #imgAvatar {
+    width: 4rem;
+    border-radius: 10px;
+}
+
+.error{
+    display: none;
+    gap: 1rem;
+    font-size: 1rem;
+    color: hsl(7, 71%, 60%);
+    font-weight: 300;
+}
