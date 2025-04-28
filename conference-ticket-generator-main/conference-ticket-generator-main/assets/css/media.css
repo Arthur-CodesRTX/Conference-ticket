@@ -31,6 +31,7 @@
         text-align: center;
         width: 37.5rem;
         height: 17.5rem;
+        aspect-ratio: 0;
         background-repeat: no-repeat;
         margin: 4rem;
     }
