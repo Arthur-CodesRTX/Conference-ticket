@@ -311,10 +311,9 @@
     z-index: 1;
     text-align: center;
     width: 100vw;
-    height: 100vh;
+    aspect-ratio: 1;
     background-repeat: no-repeat;
     margin: 0;
-    margin-bottom: 8rem;
 }
 
 .ticketContainer {
