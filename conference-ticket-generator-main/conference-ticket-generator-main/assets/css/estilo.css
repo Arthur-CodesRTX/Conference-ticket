@@ -310,8 +310,8 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    width: 27rem;
-    height: 12.5rem;
+    width: 100vw;
+    height: 100vh;
     background-repeat: no-repeat;
     margin: 0;
     margin-bottom: 8rem;
