@@ -26,7 +26,7 @@
     let selectedImage = null;
 
     btnTicket.addEventListener("click", renderTicket);
-    inputs.forEach(input => input.addEventListener("keydown", detectLetter));
+    inputs.forEach(input => input.addEventListener("input", detectLetter));
     fileInput.addEventListener("change", detectDropbox)
     removeBtn.addEventListener("click", removeImage)
     changeBtn.addEventListener("click", changeImage)
@@ -123,13 +123,10 @@
         }
     }
 
-    function detectLetter(event){
+    function detectLetter(){
         let brother = this.nextElementSibling;
-
-        if (/^[a-zA-Z0-9]$/.test(event.key)) {
-            brother.style.display = "none" 
-            this.style.border = "1px solid #8784a4"
-          };
+        brother.style.display = "none" 
+        this.style.border = "1px solid #8784a4"    
     }
    
 })()
