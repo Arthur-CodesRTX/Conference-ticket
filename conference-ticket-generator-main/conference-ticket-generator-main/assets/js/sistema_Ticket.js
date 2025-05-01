@@ -107,7 +107,6 @@
                 });
                 main.classList.add("displayNone");
                 headerTitle.remove();
-                body.style.height = "100vh";
                 inputs[i].id === "inputName" ? titleMainCongrats.innerHTML = inputs[i].value : null;
                 inputs[i].id === "inputEmail" ? emailMainCongrats.innerHTML = inputs[i].value : null;
                 inputs[i].id === "inputName" ? titleProfile.innerHTML = inputs[i].value : null;
