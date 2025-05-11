@@ -282,9 +282,13 @@
 }
 
 .congratsFlex{
+    width: 428px;
+    max-width: 100vw;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .mainCongrats h1 span {
@@ -309,9 +313,9 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    width: 100vw;
-    /* height: 12.5rem; */
-    aspect-ratio: 1;
+    width: 100%;
+    height: 12.5rem;
+    /* aspect-ratio: 1; */
     background-repeat: no-repeat;
     margin: 0;
     /* margin-bottom: 8rem; */
@@ -326,11 +330,11 @@
 }
 .ticketContainer .ticketText h2,
 .ticketProfile .ticketTextProfile h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 .ticketContainer .ticketText p,
 .ticketProfile .ticketTextProfile p {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 /* Perfil do ingresso */
@@ -364,7 +368,7 @@
 }
 
 .ticketTextProfile p a {
-    font-size: 1rem;
+    font-size: 0.8rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -380,13 +384,14 @@
     top: 80px;
     right: -10px;
     transform: rotate(90deg);
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--four-color);
 }
 
 /* Imagem do avatar */
 .ticketProfile #imgAvatar {
-    width: 4rem;
+    width: 3rem;
+    aspect-ratio: 1;
     border-radius: 10px;
 }
 
