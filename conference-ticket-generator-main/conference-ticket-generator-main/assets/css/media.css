@@ -26,6 +26,10 @@
         top: 500px;
     }
 
+    .congratsFlex{
+        background: none;
+    }
+
     .mainTicket{
         background: url(../images/pattern-ticket.svg);
         position: relative;
@@ -35,6 +39,23 @@
         height: 17.5rem;
         aspect-ratio: 0;
         background-repeat: no-repeat;
+    }
+
+    .ticketContainer .ticketText h2,
+    .ticketProfile .ticketTextProfile h2 {
+    font-size: 1.8rem;
+    }
+    .ticketContainer .ticketText p,
+    .ticketProfile .ticketTextProfile p {
+    font-size: 1rem;
+    }
+
+    .ticketTextProfile p a {
+        font-size: 1rem;
+    }
+
+    .ticketProfile #imgAvatar {
+        width: 4rem;
     }
 
     .ticketContainer{
@@ -157,6 +178,10 @@
         
     }
 
+    .congratsFlex{
+        background: none;
+    }
+
     .header{
         width: 100%;
         display: flex;
@@ -178,13 +203,6 @@
         gap: 3rem;
     }
 
-    
-    /* .ticketBackground{
-        position: relative;
-        padding-top: 10rem;
-        width: 35rem;
-    } */
-
     .mainTicket{
         background: url(../images/pattern-ticket.svg);
         position: relative;
@@ -193,7 +211,7 @@
         width: 37.5rem;
         height: 17.5rem;
         background-repeat: no-repeat;
-        margin-bottom: 6rem;
+        /* margin-bottom: 6rem; */
     }
 
     .ticketContainer{
