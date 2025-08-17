@@ -1,164 +1,119 @@
 <!DOCTYPE html>
-
-<html lang="pt-br">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/estilo.css">
-  <script src="./assets/js/sistema_Ticket.js" defer></script>
-  <link rel="stylesheet" href="./assets/css/media.css">
-
-  <!-- Ícone que aparece na aba do navegador -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/estilo.css">
+  <link rel="stylesheet" href="assets/media.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
 
-  <title>Frontend Mentor | Conference ticket generator</title>
-  <!-- Título da página que aparece na aba do navegador -->
 </head>
-
 <body>
-  <!-- Corpo principal da página -->
 
-  <div class="wrapper">
-    <!-- Div que envolve todo o conteúdo da página -->
+  <div class="bodyBackground">
+  <div class="bodyDisplay">
+  <section class="formCalculator">
 
-    <div class="bodyImages">
-      <!-- Imagens de fundo decorativas -->
-      <img src="./assets/images/pattern-lines.svg" alt="linhas_na_parte_de_cima_da_tela" class="patternLines">
-      <img src="./assets/images/pattern-circle.svg" alt="círculo_na_tela" class="patternCircle_1">
-      <img src="./assets/images/pattern-circle.svg" alt="círculo_na_tela_2" class="patternCircle_2">
-      <img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="linha_com_Estilo_desktop" class="patternLinesDesktop">
-      <img src="./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="linha_com_estilo_mobile" class="patternLinesBottom">
-      <img src="./assets/images/pattern-squiggly-line-top.svg" alt="linha_estilo_S" class="patternLineTop">
+    <header class="headerCalculator">
+      <h1>Mortgage Calculator</h1>
+      <a id="clearAll">Clear All</a>
+    </header>
+
+    <form action="" class="formContentCalculator">
+      <label for="MortgageInput">Mortgage Amount</label>
+      <div class="formMortagageInput" id="formMortgageAmount">
+        <span>£</span>
+        <input type="number" id="MortgageInput" class="inputCalculator">
+      </div>
+      <p class="errorText">This field is required</p>
+
+      <div class="formContentDisplay">
+        <div class="formContentLabels">
+          <label for="MortgageTermInput">Mortgage Term</label>
+          <div class="formMortagageInput" id="formMortgageTerm">
+            <input type="text" id="MortgageTermInput" class="inputCalculator">
+            <span>years</span>
+          </div>
+          <p class="errorText">This field is required</p>
+        </div>
+      
+        <div class="formContentLabels">
+          <label for="InterestInput">Interest Rate</label>
+          <div class="formMortagageInput" id="formMortgageRate">
+            <input type="text" id="InterestInput" class="inputCalculator">
+            <span>%</span>
+          </div>
+          <p class="errorText">This field is required</p>
+        </div>
+
+      </div>      
+      
+      <label for="MortgageType">Mortgage Type</label>
+      <article class="formCheckboxContainer">
+        <label for="checkBox01" id="checkContainer01" class="checkContainer">
+          <input type="radio" name="pagamento" id="checkBox01" class="checkInput" hidden>
+          <span class="checkBtn"></span>
+          <p>Repayment</p>              
+        </label>
+        <label for="checkBox02" id="checkContainer02" class="checkContainer">
+          <input type="radio" name="pagamento" id="checkBox02" class="checkInput" hidden>
+          <span class="checkBtn"></span>
+          <p>Interest Only</p>
+        </label> 
+      </article>
+      <p class="errorText">This field is required</p>
+
+      <button class="btnCalculate">
+        <img src="assets/images/icon-calculator.svg" alt="" class="btnImage"> 
+        <p>Calculate Repayments</p>
+      </button>
+    </form>
+  </section>
+
+  <!-- Empty results start -->
+
+  <footer class="footerCalculatorDisplayNone">
+    
+    <div class="CalculatorPrincipalText">
+      <h2>Your results</h2>
+
+      <p>Your results are shown below based on the information you provided. 
+      To adjust the results, edit the form and click “calculate repayments” again.</p>
     </div>
 
-    <div class="bodyBackground">
-      <!-- Bloco principal de conteúdo (com fundo e centralizado) -->
-
-      <header class="header">
-        <!-- Cabeçalho do site -->
-        <img src="./assets/images/logo-full.svg" alt="ícone"> 
-        <div class="headerTitle">
-          <!-- Título e subtítulo da página -->
-          <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-          <!-- Título principal -->
-          <h2>Secure your spot at next year's biggest coding conference.</h2>
-          <!-- Subtítulo -->
-        </div>
-        <div class="mainCongrats">
-          <!-- Mensagem de parabéns após o envio -->
-          <h1 class="displayNone">Congrats, <span></span>! Your ticket is ready.</h1>
-          <h2 class="displayNone">We've emailed your ticket to <span></span> and will send updates in the run up to the event.</h2>
-        </div>
-      </header>
-
-      <main class="mainContainer">
-        <!-- Conteúdo principal -->
-
-        <form action="" class="formInformations">
-          <!-- Formulário para coletar informações do usuário -->
-
-          <div class="mainUpload">
-            <!-- Seção para upload de imagem/avatar -->
-            <h3>Upload Avatar</h3>
-  
-            <article class="mainUploadBox">
-              <!-- Caixa onde o usuário pode arrastar ou clicar para fazer o upload -->
-              <div class="mainUploadImg">
-                <img src="./assets/images/icon-upload.svg" alt="ícone upload" id="MainUploadIcon">
-                <img src="" alt="" id="preview">
-              </div>
-              <p>Drag and drop or click to upload</p>
-              <div class="mainUploadButtons">
-                <button type="button" id="removeBtn">remove image</button>
-                <button type="button" id="changeBtn">change image</button>
-              </div>
-              <input type="file" id="fileInput">
-            </article>
-            
-            <div class="divInfo">
-              <!-- Informações extras sobre o upload -->
-              <img src="./assets/images/icon-info.svg" alt="info">
-              <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
-            </div>
-          </div>
-
-          <label for="inputName">
-            Full Name
-            <!-- Campo para o nome completo -->
-            <input type="text" id="inputName" class="hoverInput formInputs" required>
-            <p class="error">Please a enter valid name</p>
-          </label>
-
-          <label for="inputEmail">
-            Email Address
-            <!-- Campo para o email -->
-            <input type="email" id="inputEmail" placeholder="example@email.com" class="hoverInput formInputs" required>
-            <p class="error">Please a enter valid email adress ("@")</p>
-          </label>
-
-          <label for="inputGit">
-            GitHub Username
-            <!-- Campo para o nome de usuário do GitHub -->
-            <input type="email" id="inputGit" placeholder="@yourusername" class="hoverInput formInputs" required>
-            <p class="error">Please a enter valid username ("@")</p>
-          </label>
-
-          <button class="ticketButton" type="button">Generate My Ticket</button>
-          <!-- Botão que gera o ingresso -->
-        </form>
-      </main>
-
-      <!-- Fim do formulário -->
-
-      <!-- Início da parte de "ticket gerado" (fica escondido inicialmente com displayNone) -->
-      <div class="displayNone">
-        <div class="congratsFlex">
-          <section class="mainTicket displayNone">
-            <!-- Seção visual do ingresso gerado -->
-            <div class="ticketContainer">
-              <!-- Parte superior do ingresso -->
-              <img src="./assets/images/logo-mark.svg" alt="ícone da marca">
-              <div class="ticketText">
-                <h2>Coding Conf</h2>
-                <p>Jan 31, 2025 / Austin, TX</p>
-              </div>
-            </div>
-
-            <div class="ticketProfile">
-              <!-- Perfil do usuário no ingresso -->
-              <img src="" alt="Sua foto" id="imgAvatar">
-              <div class="ticketTextProfile">
-                <h2></h2>
-                <p><a><img src="./assets/images/icon-github.svg" alt="ícone git"></a></p>
-              </div>
-            </div>
-
-            <div class="ticketNumber">
-              <!-- Número do ingresso -->
-              <span>#01609</span>
-            </div>
-          </section>
-        </div>
-        <!-- Fundo decorativo do ingresso -->
+    <div class="CalculatorPrincipalMoney">
+      <div class="CalculatorPrincipalRepayments">
+        <p>Your monthly repayments</p>
+        <span id="moneyLibra">£</span>
       </div>
 
+      <div class="CalculatorPrincipalRepayTotal">
+        <p>Total you'll repay over the term</p>
+        <span id="moneyLibraTotal">£</span>
+      </div>
+  </footer>
+
+  <footer class="footerCalculatorDisplay">
+    <img src="assets/images/illustration-empty.svg" alt="">
+    <div class="footerCalculatorText">
+      <h2>Results shown here</h2>
+      <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.
+      </p>
     </div>
+  </footer>
+  <!-- Empty results end -->
 
-    <!-- Fim do conteúdo principal -->
-  </div>
+  <!-- Completed results start -->
 
-  <!-- Código comentado que mostra de onde veio o desafio -->
-  <!-- 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Arthur Poeta</a>.
-  </div>
-  -->
-
+  <script src="assets/sistema.js"></script>
   
-
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </div>
+  </div>
 </body>
 </html>
